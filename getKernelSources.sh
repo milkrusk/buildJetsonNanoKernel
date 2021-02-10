@@ -3,7 +3,7 @@
 # Copyright (c) 2016-2020 Jetsonhacks 
 # MIT License
 
-JETSON_MODEL="TX2"
+JETSON_MODEL="Nano"
 L4T_TARGET="32.3.1"
 SOURCE_TARGET="/usr/src"
 KERNEL_RELEASE="4.9"

@@ -15,14 +15,14 @@ fi
 cd "$SOURCE_TARGET"
 echo "$PWD"
 
-wget -N https://developer.nvidia.com/embedded/dlc/r32-3-1_Release_v1.0/Sources/T186/public_sources.tbz2
+wget -N https://developer.nvidia.com/embedded/L4T/r32_Release_v5.0/sources/T210/public_sources.tbz2
 # l4t-sources is a tbz2 file
 tar -xvf public_sources.tbz2  Linux_for_Tegra/source/public/kernel_src.tbz2 --strip-components=3
 tar -xvf kernel_src.tbz2
 # Space is tight; get rid of the compressed kernel source
 rm -r kernel_src.tbz2
 cd kernel/kernel-4.9
-# Go get the default config file; this becomes the new system configuration
+# Go get the default config file; this becomes the new stem configuration
 zcat /proc/config.gz > .config
 # Make a backup of the original configuration
 cp .config config.orig

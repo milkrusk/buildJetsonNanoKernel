@@ -12,8 +12,14 @@ cd "$SOURCE_TARGET"kernel/kernel-4.9
 # Get the number of CPUs 
 NUM_CPU=$(nproc)
 
+make prepare #prep Image
+
+#back up old kernel
+sudo cp /boot/Image /boot/Image.original
+
 # Make the kernel Image 
 time make -j$(($NUM_CPU - 1)) Image
+
 if [ $? -eq 0 ] ; then
   echo "Image make successful"
   echo "Image file is here: "

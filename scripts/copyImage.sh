@@ -12,4 +12,10 @@ cd /usr/src/kernel/kernel-4.9
 # copy this over to the internal eMMC if that is where the Jetson boots
 sudo cp arch/arm64/boot/Image /boot/Image
 
+#verify the kernel image
+ls -alh /boot/Image*
+
+#reboot
+sudo reboot
+
 
