@@ -36,3 +36,4 @@ LOCAL_VERSION=${KERNEL_VERSION#$"4.9.140"}
 bash scripts/config --file .config \
 	--set-str LOCALVERSION $LOCAL_VERSION
 
+make menuconfig
